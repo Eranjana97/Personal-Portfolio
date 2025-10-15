@@ -1,0 +1,305 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-padding-top: 90px;
+            /* Height of the navbar */
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #faf9f7;
+            color: #4a4a4a;
+            line-height: 1.7;
+            font-weight: 300;
+            padding-top: 70px;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: rgba(250, 249, 247, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e8e6e3;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s;
+        }
+
+        .navbar-brand {
+            font-weight: 500;
+            color: #4a4a4a !important;
+            font-size: 0.875rem;
+            letter-spacing: 0.05em;
+        }
+
+        .navbar-nav .nav-link {
+            color: #8a8a8a !important;
+            font-size: 0.875rem;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-item {
+            margin-bottom: 0;
+        }
+
+        .navbar-nav .nav-link:hover,
+        .navbar-nav .nav-link.active {
+            color: #9c8b7a !important;
+        }
+
+        .navbar-toggler {
+            border: none;
+            justify-content: center;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(74, 74, 74, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .container {
+            max-width: 1000px;
+        }
+
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid #e8e6e3;
+        }
+
+        .personal {
+            animation: fadeInUp both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100vh;
+        }
+
+        #experience {
+            animation: fadeInUp both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100vh;
+        }
+
+        #projects {
+            animation: fadeInUp both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100vh;
+        }
+
+        #certificates2 {
+            animation: fadeInUp both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100vh;
+        }
+
+        #education {
+            animation: fadeInUp both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100vh;
+        }
+
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        /* Profile Section */
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .profile-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4c5b9 0%, #b8a99a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 10px solid #fff;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .profile-image svg {
+            width: 60px;
+            height: 60px;
+            opacity: 0.6;
+        }
+
+        .profile-text h1 {
+            margin-bottom: 0.25rem;
+        }
+
+        @media (max-width: 576px) {
+            .profile-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: #2c2c2c;
+        }
+
+        h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 3rem;
+            color: #9c8b7a;
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #2c2c2c;
+        }
+
+        p,
+        li {
+            font-size: 1rem;
+            color: #6a6a6a;
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        #badge{
+            background-color: #7a6a5a;
+        }
+
+        #badge:hover{
+            background-color: #9c8b7a;
+            transition: all 0.3s ease;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(156, 139, 122, 0.3);
+        }
+
+        a {
+            color: #9c8b7a;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .accent-link {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: #9c8b7a;
+            color: #faf9f7;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .accent-link:hover {
+            background-color: #7a6a5a;
+            color: #faf9f7;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(156, 139, 122, 0.3);
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: #f0ede9;
+            color: #6a6a6a;
+            border: 1px solid #e8e6e3;
+            border-radius: 2px;
+            margin: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 400;
+        }
+
+        .experience-item,
+        .project-item,
+        .certificate-item,
+        .education-item {
+            margin-bottom: 3rem;
+        }
+
+        .experience-item:last-child,
+        .project-item:last-child,
+        .certificate-item:last-child,
+        .education-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .year {
+            font-size: 0.875rem;
+            color: #9c8b7a;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item {
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-label {
+            font-weight: 500;
+            color: #2c2c2c;
+            margin-right: 0.5rem;
+        }
+
+        .footer {
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 0;
+            }
+
+            h2 {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @keyframes fadeInUp {
+
+            30% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+
+        @keyframes fadeInUp2 {
+
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+
+            20% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }

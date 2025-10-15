@@ -1,0 +1,173 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: #ffffff;
+            color: #18181b;
+            line-height: 1.7;
+            font-weight: 300;
+            padding: 3rem 1rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(24, 24, 27, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            color: #18181b;
+        }
+        
+        h2 {
+            font-size: 1rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 1rem;
+            color: #71717a;
+        }
+        
+        p {
+            font-size: 1rem;
+            color: #52525b;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        img.img4{
+            display: block;
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+        .render-card {
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .render-card:hover {
+            transform: translateY(-4px);
+        }
+        
+        .render-placeholder {
+            width: 100%;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, #f4f4f5 0%, #e4e4e7 100%);
+            border: 1px solid rgba(24, 24, 27, 0.1);
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .render-placeholder svg {
+            width: 64px;
+            height: 64px;
+            opacity: 0.3;
+        }
+        
+        .render-card h3 {
+            font-size: 1.125rem;
+            font-weight: 500;
+            color: #18181b;
+            margin-bottom: 0.5rem;
+        }
+        
+        .render-card .description {
+            font-size: 0.875rem;
+            color: #71717a;
+        }
+        
+        .back-link {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: transparent;
+            color: #18181b;
+            border: 1px solid #18181b;
+            font-weight: 500;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            margin-top: 3rem;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            background-color: #7a6a5a;
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 5rem;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(24, 24, 27, 0.1);
+        }
+
+        .button-hibbies {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            header {
+                margin-bottom: 3rem;
+            }
+
+            
+        }
+        .imgs{
+            animation: fadeInUp both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 100vh;
+        }
+
+        .imgs2{
+            animation: fadeInUp2 both;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40vh;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(10px);
+            }
+        }
+
+        @keyframes fadeInUp2 {
+            0% {
+                opacity: 0;
+                transform: translateY(100px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
