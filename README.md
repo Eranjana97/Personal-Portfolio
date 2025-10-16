@@ -1,67 +1,43 @@
 <h1>Personal Portfolio — Website Architecture</h1>
 
 <h2>1. Project Summary</h2>
-<p>Responsive, component-based personal portfolio website with three pages: Landing, Projects, and Resume/Contact. Includes external links to the BIT degree progress website (Education section) and an Architectural Visualization site (Hobbies section).</p>
+<p>Three-page static portfolio: Landing (index.html), Education progress (portfolio_bit_progress.html), Hobbies showcase (portfolio_hobbies.html). Core assets sit in css/, img/, and js/ folders.</p>
 
 <h2>2. Pages Overview</h2>
-<p><strong>Landing Page (/):</strong> About Me, Profile Summary, Experience, Projects Preview, Education, Certificates, Skills & Abilities, Hobbies, and Contact Information.</p>
-<p><strong>Projects Page (/projects):</strong> Detailed project gallery with filters, tech tags, and individual project details.</p>
-<p><strong>Resume/Contact Page (/resume):</strong> Printable resume, download CV option, and contact form integration.</p>
+<p><strong>Landing (index.html)</strong> — hero, about, profile summary, experience, projects preview, education link, certificates, skills & abilities, hobbies link, and contact information.</p>
+<p><strong>Education (portfolio_bit_progress.html)</strong> — dedicated page or linked snapshot for BIT degree progress.</p>
+<p><strong>Hobbies (portfolio_hobbies.html)</strong> — architectural visualization showcase.</p>
 
 <h2>3. High-Level Architecture</h2>
-<p>Static site hosted on GitHub Pages or Netlify with CI/CD via GitHub Actions. Content is rendered through reusable components and structured data files. Optimized for performance, accessibility, and SEO.</p>
+<p>Static site deployed from a repository root containing three HTML pages and three top-level asset folders. CI/CD via GitHub Actions or direct GitHub Pages deploy is supported.</p>
 
-<h2>4. Component Map</h2>
-<p>Layout (Header, Footer, SEO Component)</p>
-<p>Hero, About, ProjectCard, ExperienceTimeline, SkillsChart, CertificateList, ContactForm</p>
-<p>Shared UI: Button, Icon, Badge, Modal, Card</p>
+<h2>4. Repository Structure</h2>
+<p>Root files and folders as seen in the repository:</p>
+<p>css/  — stylesheet files (global.css, theme, vendor css)</p>
+<p>img/  — all image assets (hero, project thumbnails, certificates)</p>
+<p>js/   — client scripts (navigation, analytics stubs, gallery)</p>
+<p>README.md — project documentation and architecture overview</p>
+<p>index.html — Landing page (primary entry)</p>
+<p>portfolio_bit_progress.html — BIT progress showcase. Represent the bit degree program completion amount as a percentage</p>
+<p>portfolio_hobbies.html — Hobbies (Architectural visualization) page included all the projects recently done as the hobby</p>
 
-<h2>5. Data Model</h2>
-<p>/data/projects.yaml — title, slug, description, images, tech stack, demo link, repo link</p>
-<p>/data/experience.yaml — company, role, duration, highlights</p>
-<p>/data/education.yaml — degree, institution, duration, external link (BIT progress)</p>
-<p>/data/certificates.yaml — certificate name, issuer, date, file link</p>
-<p>/data/skills.yaml — category, skill, proficiency level</p>
+<h2>5. Content & Data</h2>
+<p>Content is embedded in the HTML pages; consider moving structured content to /data (YAML/JSON) if you want programmatic rendering or easier updates.</p>
 
-<h2>6. File Structure</h2>
-<p>personal-portfolio/</p>
-<p>├── README.md</p>
-<p>├── public/</p>
-<p>├── src/ (pages, components, styles, utils)</p>
-<p>├── data/ (YAML or JSON files)</p>
-<p>├── assets/ (images, pdfs)</p>
-<p>└── .github/workflows/deploy.yml</p>
+<h2>6. Deployment Notes</h2>
+<p>To publish on GitHub Pages, set the repository to serve the root and ensure index.html is present.</p>
+<p>Use GitHub Actions to run optional build steps (minify CSS/JS, image optimizations) before pushing final artifacts to the gh-pages branch or main branch for Pages.</p>
 
-<h2>7. Technology Stack</h2>
-<p>Frontend: React with Vite (or static HTML)</p>
-<p>Styling: Tailwind CSS or SCSS</p>
-<p>Hosting: GitHub Pages / Netlify</p>
-<p>Deployment: GitHub Actions</p>
-<p>Forms: Netlify Forms / Formspree</p>
-<p>Analytics: Plausible / Google Analytics</p>
+<h2>7. Maintenance Checklist</h2>
+<p>Last update done on 16/10/2025 to the Readme file to update the website architecture.</p>
+<p>Update pages: edit index.html, portfolio_bit_progress.html, and portfolio_hobbies.html as content changes.</p>
 
-<h2>8. Performance and Accessibility</h2>
-<p>Optimized images (WebP/AVIF)</p>
-<p>Lazy-loading and static rendering</p>
-<p>Accessible components with proper ARIA labels</p>
-<p>Semantic HTML structure and heading hierarchy</p>
-<p>Lighthouse targets: Performance > 90, Accessibility > 90</p>
+<h2>8. Quick README snippet</h2>
+<p>Repo layout: css/, img/, js/, index.html, portfolio_bit_progress.html, portfolio_hobbies.html, README.md.</p>
 
-<h2>9. CI/CD Workflow</h2>
-<p>Trigger: Push to main branch</p>
-<p>Steps: Lint → Test → Build → Deploy</p>
-<p>Deployment: Automatic to GitHub Pages or Netlify</p>
-<p>Branch protection enabled for main branch</p>
+<h2>9. External Links</h2>
+<p>BIT degree progress and completion percentage can be review through the portfolio_bit_progress.html file.</p>
+<p>Hobbies entry links to the portfolio_hobbies.html page in the repo.</p>
 
-<h2>10. Maintenance Guide</h2>
-<p>Add a new project: Update /data/projects.yaml and add images</p>
-<p>Add a new certificate: Update /data/certificates.yaml</p>
-<p>Run Lighthouse monthly to monitor performance</p>
-<p>Keep dependencies updated regularly</p>
-
-<h2>11. External Links</h2>
-<p>BIT Degree Progress Website — linked under Education section</p>
-<p>Architectural Visualization Website — linked under Hobbies section</p>
-
-<h2>12. Summary</h2>
-<p>Personal Portfolio showcasing About, Projects, Education, Skills, and Hobbies across three pages. Built with modern web standards, easily maintainable, and deployed seamlessly through GitHub Pages or Netlify.</p>
+<h2>10. Summary</h2>
+<p>Repository follows a straightforward static structure with three HTML pages and clear top-level asset folders matching the screenshot. This keeps deployment simple and content easy to manage.</p>
