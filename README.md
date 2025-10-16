@@ -1,4 +1,4 @@
-<h1>Personal Portfolio — Website Architecture</h1>
+<h1>🫟Personal Portfolio — Website Architecture🫟</h1>
 
 <h2>1. Project Summary</h2>
 <p>Three-page static portfolio: Landing (index.html), Education progress (portfolio_bit_progress.html), Hobbies showcase (portfolio_hobbies.html). Core assets sit in css/, img/, and js/ folders.</p>
